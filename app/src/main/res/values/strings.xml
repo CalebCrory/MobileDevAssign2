@@ -1,6 +1,11 @@
-<resources>
+<>
     <string name="app_name">Mobile Dev Assign 2</string>
     <string name="title_text">True Food Café</string>
     <string name="txtNewlyAddedItems">Newly Added Items</string>
     <string name="txtReview">Placeholder Text</string>
+    <string name="txtHome">Home</string>
+    <string name="txtMenu">Menu</string>
+    <string name="txtFeedback">Feedback</string>
+    <string name="txtInformation">Information</string>
+    <string name="txtCalculator">Calculator</string>
 </resources>

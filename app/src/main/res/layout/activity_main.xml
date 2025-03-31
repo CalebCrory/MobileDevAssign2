@@ -19,50 +19,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="4"
             android:background="#FDE6E6"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="133dp"
-                android:layout_height="match_parent"
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/logoImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    app:srcCompat="@drawable/logo" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="278dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/titleText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="@string/title_text"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                android:text="@string/title_text"
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="3"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnImageLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="147dp"
                 android:layout_weight="1"
@@ -76,7 +62,7 @@
                 tools:srcCompat="@drawable/restaurantstockimage" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btnImageRight"
                 android:layout_width="wrap_content"
                 android:layout_height="147dp"
                 android:layout_weight="1"
@@ -86,9 +72,10 @@
 
         <Button
             android:id="@+id/btnNewlyAddedItems"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="@string/txtNewlyAddedItems"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -99,22 +86,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="6"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="207dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imgNewItem1"
                     android:layout_width="match_parent"
                     android:layout_height="85dp"
                     app:srcCompat="@drawable/baseline_image_24" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btnNewItem1"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Button" />
@@ -123,16 +112,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imgNewItem2"
                     android:layout_width="match_parent"
                     android:layout_height="85dp"
                     app:srcCompat="@drawable/baseline_image_24" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnNewItem2"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Button" />
@@ -142,11 +133,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="2"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnImageLeft"
                 android:layout_width="86dp"
                 android:layout_height="147dp"
                 android:layout_weight="1"
@@ -162,7 +153,7 @@
                 tools:text="@string/txtReview" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btnImageRight"
                 android:layout_width="47dp"
                 android:layout_height="147dp"
                 android:layout_weight="1"
@@ -173,42 +164,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.5"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnHome"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/txtHome" />
 
             <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnMenu"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/txtMenu" />
 
             <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnFeedback"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/txtFeedback" />
 
             <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnInfo"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/txtInformation" />
 
             <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnCalculator"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/txtCalculator" />
         </LinearLayout>
 
     </LinearLayout>
