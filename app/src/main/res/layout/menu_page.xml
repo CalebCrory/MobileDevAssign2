@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/title_text"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnNewlyAdded"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Newly Added Items"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:icon="@drawable/doublechevronright"
+                app:iconGravity="end"
+                app:iconSize="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+            <Button
+                android:id="@+id/btnStarters"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Starters"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:icon="@drawable/doublechevronright"
+                app:iconGravity="end"
+                app:iconSize="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNewlyAdded" />
+
+            <Button
+                android:id="@+id/btnMains"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Mains"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:icon="@drawable/doublechevronright"
+                app:iconGravity="end"
+                app:iconSize="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStarters" />
+
+            <Button
+                android:id="@+id/btnDesserts"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Desserts"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:icon="@drawable/doublechevronright"
+                app:iconGravity="end"
+                app:iconSize="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMains" />
+
+            <Button
+                android:id="@+id/btnDrinks"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Drinks"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:icon="@drawable/doublechevronright"
+                app:iconGravity="end"
+                app:iconSize="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDesserts" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/baseline_home_24"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btnMenu"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/baseline_restaurant_menu_24"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnHome" />
+
+            <Button
+                android:id="@+id/btnFeedback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/baseline_feedback_24"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnInformation"
+                app:layout_constraintStart_toEndOf="@+id/btnMenu" />
+
+            <Button
+                android:id="@+id/btnInformation"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/baseline_info_24"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnCounter" />
+
+            <Button
+                android:id="@+id/btnCounter"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:icon="@drawable/baseline_calculate_24"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

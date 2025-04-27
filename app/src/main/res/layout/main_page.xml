@@ -38,7 +38,8 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/title_text"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="34sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgLogo"
@@ -77,13 +78,14 @@
             <Button
                 android:id="@+id/btnNewlyAddedItems"
                 android:layout_width="400dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/txtNewlyAddedItems"
                 android:textAlignment="center"
-                android:textSize="16sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:icon="@drawable/doublechevronright"
                 app:iconGravity="end"
                 app:iconSize="48dp"
@@ -94,7 +96,7 @@
             <ImageView
                 android:id="@+id/imgItem1"
                 android:layout_width="200dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
@@ -107,10 +109,12 @@
             <Button
                 android:id="@+id/btnItem1"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:text="Button"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/btnItem2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgItem1" />
@@ -118,7 +122,7 @@
             <ImageView
                 android:id="@+id/imgItem2"
                 android:layout_width="200dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_marginEnd="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imgItem1"
@@ -127,9 +131,11 @@
             <Button
                 android:id="@+id/btnItem2"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginEnd="4dp"
                 android:text="Button"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgItem2" />
 
@@ -169,9 +175,8 @@
 
             <Button
                 android:id="@+id/btnHome"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="4dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:textAlignment="center"
                 android:textSize="12sp"
@@ -182,9 +187,8 @@
 
             <Button
                 android:id="@+id/btnMenu"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="8dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:textAlignment="center"
                 android:textSize="12sp"
@@ -195,10 +199,8 @@
 
             <Button
                 android:id="@+id/btnFeedback"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:textAlignment="center"
                 android:textSize="12sp"
@@ -210,9 +212,8 @@
 
             <Button
                 android:id="@+id/btnInformation"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:textAlignment="center"
                 android:textSize="12sp"
@@ -223,9 +224,8 @@
 
             <Button
                 android:id="@+id/btnCounter"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginEnd="4dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:textAlignment="center"
                 android:textSize="12sp"
