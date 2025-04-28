@@ -24,6 +24,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/logo" />
 
+            <ImageButton
+                android:id="@+id/btnLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/logo"
+                app:layout_constraintStart_toStartOf="@+id/imgLogo"
+                app:layout_constraintTop_toTopOf="@+id/imgLogo" />
+
             <TextView
                 android:id="@+id/txtTitle"
                 android:layout_width="250dp"
@@ -76,7 +84,7 @@
             <ImageView
                 android:id="@+id/imgItem"
                 android:layout_width="350dp"
-                android:layout_height="350dp"
+                android:layout_height="300dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"

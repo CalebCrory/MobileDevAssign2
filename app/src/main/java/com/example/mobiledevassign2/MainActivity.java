@@ -74,9 +74,33 @@ public class MainActivity extends AppCompatActivity {
         ImageButton btnReviewLeft = (ImageButton)findViewById(R.id.btnReviewLeft);
         ImageButton btnReviewRight = (ImageButton)findViewById(R.id.btnReviewRight);
 
-        /*
-        Add OnClickListeners to change image on imgCarousel and change text in txtReview
-         */
+        btnCarouselLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add event handler for Carousel Left button
+            }
+        });
+
+        btnCarouselRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add event handler for Carousel Right button
+            }
+        });
+
+        btnReviewLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add event handler for Review Left button
+            }
+        });
+
+        btnReviewRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Add event handler for Review Right button
+            }
+        });
 
         Button btnNewlyAddedItems = (Button)findViewById(R.id.btnNewlyAddedItems);
         Button btnItem1 = (Button)findViewById(R.id.btnItem1);
