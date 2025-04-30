@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +16,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    int ReviewCounter = 0;
+    int CarouselCounter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.main_page);
+
+        ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+        iv.setImageResource(R.drawable.restaurantstockimage);
 
         ImageButton btnLogo = (ImageButton)findViewById(R.id.btnLogo);
         Button btnHome = (Button)findViewById(R.id.btnHome);
@@ -77,28 +85,84 @@ public class MainActivity extends AppCompatActivity {
         btnCarouselLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add event handler for Carousel Left button
+                CarouselCounter--;
+                if (CarouselCounter == 0) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage);
+                } else if (CarouselCounter == 1) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage2);
+                } else if (CarouselCounter == 2) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage3);
+                } else if (CarouselCounter < 0) {
+                    CarouselCounter = 2;
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage3);
+                }
             }
         });
 
         btnCarouselRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add event handler for Carousel Right button
+                CarouselCounter++;
+                if (CarouselCounter == 0) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage);
+                } else if (CarouselCounter == 1) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage2);
+                } else if (CarouselCounter == 2) {
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage3);
+                } else if (CarouselCounter >= 3) {
+                    CarouselCounter = 0;
+                    ImageView iv = (ImageView)findViewById(R.id.imgCarousel);
+                    iv.setImageResource(R.drawable.restaurantstockimage);
+                }
             }
         });
 
         btnReviewLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add event handler for Review Left button
+                ReviewCounter--;
+                if (ReviewCounter == 0) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview1));
+                } else if (ReviewCounter == 1) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview2));
+                } else if (ReviewCounter == 2) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview3));
+                } else if (ReviewCounter < 0) {
+                    ReviewCounter = 2;
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview3));
+                }
             }
         });
 
         btnReviewRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add event handler for Review Right button
+                ReviewCounter++;
+                if (ReviewCounter == 0) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview1));
+                } else if (ReviewCounter == 1) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview2));
+                } else if (ReviewCounter == 2) {
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview3));
+                } else if (ReviewCounter >= 3) {
+                    ReviewCounter = 0;
+                    TextView tv = (TextView)findViewById(R.id.txtReview);
+                    tv.setText(getString(R.string.txtReview1));
+                }
             }
         });
 

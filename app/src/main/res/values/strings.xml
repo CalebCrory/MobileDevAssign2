@@ -8,4 +8,17 @@
     <string name="txtFeedback">Feedback</string>
     <string name="txtInformation">Information</string>
     <string name="txtCalculator">Calculator</string>
+    <string name="txtReview1">Placeholder Review Text 1</string>
+    <string name="txtReview2">Placeholder Review Text 2</string>
+    <string name="txtReview3">Placeholder Review Text 3</string>
+    <string name="txtNewItemsPrice">£5.00</string>
+    <string name="txtStartersPrice">£3.00</string>
+    <string name="txtMainsPrice">£7.00</string>
+    <string name="txtDessertsPrice">£4.00</string>
+    <string name="txtDrinksPrice">£2.00</string>
+    <string name="txtNewItemsCalories">1255kJ / 300kcal</string>
+    <string name="txtStartersCalories">837kJ / 200kcal</string>
+    <string name="txtMainsCalories">1674kJ / 400kcal</string>
+    <string name="txtDessertsCalories">2092kJ / 500kcal</string>
+    <string name="txtDrinksCalories">418kJ / 100kcal</string>
 </resources>

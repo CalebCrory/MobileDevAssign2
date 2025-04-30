@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.mobiledevassign2.R;
 
+import org.w3c.dom.Text;
+
+import java.util.List;
+
 public class CalculatorActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +26,24 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.calculator_page);
+
+        List<String> itemList = GlobalLists.itemList;
+        List<String> calorieList = GlobalLists.calorieList;
+        int kcal = GlobalLists.kcal;
+        double kJ = kcal * 4.184;
+        int roundkJ = (int)Math.round(kJ);
+
+        String kcalTotal = String.valueOf(kcal);
+        String kJTotal = String.valueOf(roundkJ);
+        String Total = kJTotal + "kJ / " + kcalTotal + "kcal";
+
+        TextView txtItemsList = (TextView)findViewById(R.id.txtItemsList);
+        TextView txtCaloriesList = (TextView)findViewById(R.id.txtCaloriesList);
+        TextView txtTotalCalories = (TextView)findViewById(R.id.txtTotalCalories);
+
+        txtItemsList.setText(String.join("\n\n", itemList));
+        txtCaloriesList.setText(String.join("\n", calorieList));
+        txtTotalCalories.setText(Total);
 
         ImageButton btnLogo = (ImageButton)findViewById(R.id.btnLogo);
         Button btnHome = (Button)findViewById(R.id.btnHome);
@@ -76,7 +99,10 @@ public class CalculatorActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add event handler for Clear button
+                GlobalLists.clearItemList();
+                GlobalLists.clearCalorieList();
+                GlobalLists.resetKcal(0);
+                recreate();
             }
         });
 
